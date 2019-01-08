@@ -1,9 +1,27 @@
 package hello;
 
-public class User{
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+
+@Entity
+@Table(name="user")
+public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name="id")
     private int id;
+
+    @Column(name="username")
     private String name;
+
+    @Column(name="password")
     private String password;
 
     public long getId() {
