@@ -11,5 +11,7 @@
         <property name = "show_sql">true</property>
         <property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
+        <mapping class="hello.User"/>
+
     </session-factory>
 </hibernate-configuration>

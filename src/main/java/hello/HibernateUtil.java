@@ -23,7 +23,8 @@ public class HibernateUtil {
     public static void loadSessionFactory(){
 
         Configuration configuration = new Configuration();
-        configuration.configure("/src/main/resources/hibernate.cfg.xml");
+        configuration.configure("hibernate.cfg.xml").addAnnotatedClass(User.class);
+        //configuration.addAnnotatedClass(User.class);
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
         sessionFactory = configuration.buildSessionFactory(builder.build());
 

@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@Entity
-@Table(name="user")
+@javax.persistence.Entity
+@javax.persistence.Table(name = "user")
 public class User implements Serializable {
 
     @Id
@@ -24,7 +24,7 @@ public class User implements Serializable {
     @Column(name="password")
     private String password;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
