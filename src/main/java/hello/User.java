@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@javax.persistence.Entity
-@javax.persistence.Table(name = "user")
+@Entity
+@Table(name="user")
 public class User implements Serializable {
 
     @Id
@@ -19,7 +19,7 @@ public class User implements Serializable {
     private int id;
 
     @Column(name="username")
-    private String name;
+    private String username;
 
     @Column(name="password")
     private String password;
@@ -32,12 +32,12 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
